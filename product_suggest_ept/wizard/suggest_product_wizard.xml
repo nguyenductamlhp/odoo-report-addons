@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<openerp>
+	<data>		
+		<record id="suggest_product_wizard" model="ir.ui.view">
+			<field name="name">Suggest Product Wizard</field>
+			<field name="model">suggest.product.wizard</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Suggest Product Wizard">				
+					<separator colspan="4" string="Sale Lines" />
+					<field name="sale_line_ids">
+						<tree string="Sale Lines" create="false" delete="false" editable="top" colors="green:sale_line_id!=False;">
+							<field name="suggested_of" invisible="1"/>
+							<field name="product_id"/>							
+							<field name="qty_available"/>
+							<field name="qty"/>
+							<field name="sale_line_id" invisible="1"/>							
+						</tree>
+					</field>
+					<separator colspan="4" string="Suggested Product" />
+					<field name="suggest_product_line_wizard_ids">
+						<tree string="Suggest Product" create="false" delete="false" editable="top">
+							<field name="suggested_of" readonly="1"/>
+							<field name="product_id"/>							
+							<field name="qty_available"/>
+							<field name="qty"/>
+							<field name="sale_line_id" invisible="1"/>							
+						</tree>
+					</field>					
+					<footer>
+						<button name="add_products" string="Add" class="oe_highlight" type="object"/>                                                
+                        <button string="Close" class="oe_highlight" special="cancel"/>
+                    </footer>
+				</form>
+			</field>
+		</record>
+		<record id="suggest_product_form_view" model="ir.ui.view">
+			<field name="name">Suggest Product Form View</field>
+			<field name="model">suggest.product.line.wizard</field>
+			<field name="type">form</field>
+			<field name="sequence">1</field>
+			<field name="arch" type="xml">
+				<form string="Suggest Product Wizard">					
+					<group>				
+						<group>
+							<field name="product_id"/>
+							<field name="qty_available"/>							
+						</group>
+						<group>
+							<field name="qty"/>
+						</group>						
+					</group>					
+				</form>
+			</field>
+		</record>
+	</data>
+</openerp>			

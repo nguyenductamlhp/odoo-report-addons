@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    	<record id="view_sale_order_form_ept" model="ir.ui.view">
+            <field name="name">sale.order.line.form2.button</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+	            <xpath expr="//notebook/page[@string='Order Lines']/field[@name='order_line']" position="before">
+	            	<group colspan="4">
+	            		<header>
+	            			<button name="suggest_alternative_product" type="object" string="Suggest Products" class="oe_link" attrs="{'invisible':[('state','!=','draft')]}"/>
+	            		</header>
+	            	</group>
+	            </xpath>
+        	</field>
+        </record>
+    </data>
+</openerp>
