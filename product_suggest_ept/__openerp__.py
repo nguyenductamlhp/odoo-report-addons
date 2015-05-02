@@ -6,6 +6,7 @@
             - Allows to configure multiple suggested products on product.
             - This module allows users to add alternate product in case of one of the product stock is not available.
             - You can configure products which needs to be added along with other product.
+
     """,
     'author': 'Emipro Technologies',
     'website': 'www.emiprotechnologies.com',
