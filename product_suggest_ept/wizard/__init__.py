@@ -1,2 +1,0 @@
-import suggest_product_wizard
-import suggest_product_line_wizard
