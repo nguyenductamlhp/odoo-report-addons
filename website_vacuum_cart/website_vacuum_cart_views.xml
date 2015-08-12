@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+		<template id="vacuum_cart" inherit_id="website_sale.continue_shopping" customize_show="True" name="Clear Cart Button">
+			<xpath expr="//a[@href='/shop']" position="after">
+				<t t-if="website_sale_order and website_sale_order.website_order_line">
+					<a href="" id="" class="btn btn-default mb32 vacuum_cart"><span class="fa fa-trash-o" style="padding-right:6px;"/>Vacuum Cart</a>
+				</t>
+			</xpath>
+		</template>
+
+		<template id="assets_frontend" inherit_id="website.assets_frontend" name="Shop">
+			<xpath expr="." position="inside">
+				<script type="text/javascript" src="/website_vacuum_cart/static/src/js/website_vacumm_cart.js"></script>
+			</xpath>
+		</template>
+		
+		<template id="vacuum_header" inherit_id="website_sale.header" name="Header Shop My Cart Link">
+		  <xpath expr="//header//ul[@id='top_menu']/li" position="replace">
+		      <t t-set="website_sale_order" t-value="website.sale_get_order()"/>
+		      <li t-att-class="'' if website_sale_order and website_sale_order.cart_quantity else 'hidden'">
+		          <a href="/shop/cart" style="margin-right: 9px;">
+		              <i class="fa fa-shopping-cart"></i>
+		              My cart <sup t-attf-class="my_cart_quantity label label-primary" t-esc="website_sale_order and website_sale_order.cart_quantity or ''"/>
+		              <sub><a href="" id="vacuum_cart_button" title="Clear your Cart" class="btn btn-default mb32 vacuum_cart_cross vacuum_cart">x</a></sub>
+		          </a>
+		      </li>
+              <style>
+                    .vacuum_cart_cross
+                    {
+                           
+                            padding: 0px !important;
+                            margin: 0;
+                            width: 20px;
+                            position: absolute !important;
+                            top: 14px;
+                            left:102px;
+                            background-color: rgba(119,119,119,0.7);
+                            border: 1px solid #ccc;
+                            border-radius: 3px;
+                            color:white !important;
+
+                    }
+                       
+                   
+                    .vacuum_cart_cross:hover
+                    {
+                            background-color: rgba(119,119,119,0.9) !important;
+                         
+                    }
+                  
+        </style>	
+		  </xpath>
+		</template>
+			
+	</data>
+</openerp>
+
