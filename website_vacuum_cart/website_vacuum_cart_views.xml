@@ -22,7 +22,7 @@
 		          <a href="/shop/cart" style="margin-right: 9px;">
 		              <i class="fa fa-shopping-cart"></i>
 		              My cart <sup t-attf-class="my_cart_quantity label label-primary" t-esc="website_sale_order and website_sale_order.cart_quantity or ''"/>
-		              <sub><a href="" id="vacuum_cart_button" title="Clear your Cart" class="btn btn-default mb32 vacuum_cart_cross vacuum_cart">x</a></sub>
+		              <a href="" id="vacuum_cart_button" title="Clear your Cart" class="btn btn-default mb32 vacuum_cart_cross vacuum_cart">x</a>
 		          </a>
 		      </li>
               <style>
@@ -34,7 +34,7 @@
                             width: 20px;
                             position: absolute !important;
                             top: 14px;
-                            left:102px;
+                            right : 0;
                             background-color: rgba(119,119,119,0.7);
                             border: 1px solid #ccc;
                             border-radius: 3px;
