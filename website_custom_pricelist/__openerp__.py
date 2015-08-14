@@ -7,7 +7,7 @@
     "category": "Website",
     "description": """
 
-After installation of this module, you can set your custom pricelist for the products in Website instead of default pricelist which is taken from the admin user's Partner pricelist.
+After installation of this module, you can set your custom pricelist for the products in Website instead of default pricelist which is taken from the current logged in user's Partner pricelist.
 
 ==================================================================== \n
 
