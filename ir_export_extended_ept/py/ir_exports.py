@@ -15,9 +15,14 @@ import re
 from cStringIO import StringIO
 
 
+class ir_exports_download( models.Model ):
+    _name = "ir.exports.download"
+    _description="File downlaod"
+    attachment_id = fields.Many2one( 'ir.attachment', string="Attachments" )
 
 class ir_exports( models.Model ):
     _name = "ir.exports"
+    _description="Export"
     _inherit = ['ir.exports', 'mail.thread', 'ir.needaction_mixin']
 
     @api.one
@@ -110,12 +115,18 @@ class ir_exports( models.Model ):
                          }
 
                 doc_id = self.env['ir.attachment'].create( attach_vals )
-                if self.attachment_id :
+                dwnld_obj = self.env['ir.exports.download']
+                dwnld = dwnld_obj.search([('create_uid.id', '=', self.env.uid)], limit=1)
+                
+                if dwnld and dwnld.attachment_id :
                     try :
-                        self.attachment_id.unlink()
+                        dwnld.attachment_id.unlink()
                     except :
                         pass
-                self.write( {'attachment_id':doc_id.id} )
+                if not dwnld:
+                    dwnld = dwnld_obj.create({'attachment_id':doc_id.id})
+                else:    
+                    dwnld.write( {'attachment_id':doc_id.id} )
                 return {
                     'type' : 'ir.actions.act_url',
                     'url':   '/web/binary/saveas?model=ir.attachment&field=datas&filename_field=name&id=%s' % ( doc_id.id ),
