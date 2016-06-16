@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_ir_exports_download,ir_export_extended_ept.access_ir_exports_download,ir_export_extended_ept.model_ir_exports_download,,1,1,1,1
+access_ir_model_field_ept,access_ir_model_field_ept,model_ir_model_field_ept,,1,0,0,0
