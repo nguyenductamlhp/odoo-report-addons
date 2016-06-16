@@ -30,6 +30,9 @@ https://www.odoo.com/apps/modules?author=Emipro%20Technologies%20Pvt.%20Ltd. \n
              'view/webclient_templates.xml',
              'security/ir.model.access.csv',
             ],
+    'qweb': [
+        "static/src/xml/*.xml",
+    ],
 
     'installable': True,
     'auto_install': False,

@@ -15,6 +15,20 @@ openerp.ir_export_extended_ept = function(instance) {
 			},
 		},
 		
+		start: function(){
+	            var self = this;
+
+	            this._super();
+	            
+	            //make all data type as default export
+	            this.$el.find('#import_compat').val('');
+	        },
+        do_setup_export_formats: function(formats) {
+            this._super(formats);
+            //Excel as default exported format if exist
+            this.$el.find('#export_format').val('xls');
+        },
+		
 	    do_save_export_list: function(value) {
 	        var self = this;
 	        var fields = self.get_fields();
