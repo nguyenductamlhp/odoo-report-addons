@@ -59,7 +59,7 @@
 						<separator string="Fields to Export" colspan="4" />
 						<field name="export_fields" colspan="4" nolabel="1">
 							<tree string="Export Fields" editable="bottom">
-								<field name="sequence" />
+								<field name="sequence" widget="handle"/>
 								<field name="name" required="1" />
 								<field name="heading" required="1" />
 							</tree>
@@ -149,5 +149,55 @@
 		<menuitem id="export_with_domain_menu_ept" name="Export"
 			action="ir_exports_action_ept" parent="ir_export_extended_ept.exports_data_parent_menu_ept"
 			sequence="2" />
+			
+			
+		<record id="view_ir_model_field_ept_tree" model="ir.ui.view">
+			<field name="name">ir.model.fields</field>
+			<field name="model">ir.model.field.ept</field>
+			<field name="arch" type="xml">
+				<tree string="Fields">
+                    <field name="field_id"/>
+                    <field name="field_description"/>
+                    <field name="model_id"/>
+                    <field name="exportable"/>
+                </tree>
+   
+			</field>
+		</record>
+		
+		<record id="view_ir_model_field_ept_form" model="ir.ui.view">
+			<field name="name">ir.model.fields form</field>
+			<field name="model">ir.model.field.ept</field>
+			<field name="arch" type="xml">
+				<form>
+					<sheet>
+					<group>
+					<field name="field_id"/>
+                    <field name="field_description" readonly="1"/>
+                    <field name="model_id"/>
+                    <field name="exportable"/>
+					
+					</group>
+					</sheet>
+					
+					
+				
+				</form>
+
+			</field>
+		</record>
+		
+		<record model="ir.actions.act_window" id="action_ir_model_field_ept_tree">
+            <field name="name">Fields</field>
+            <field name="res_model">ir.model.field.ept</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            
+        </record>
+        
+        <menuitem id="export_fields_menu_ept" name="Export Fields"
+			action="action_ir_model_field_ept_tree" parent="ir_export_extended_ept.exports_data_parent_menu_ept"
+			sequence="5" />
+			
 	</data>
 </openerp>
