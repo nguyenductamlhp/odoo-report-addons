@@ -6,6 +6,19 @@ openerp.ir_export_extended_ept = function(instance) {
 		
 		
 		events: {
+			'click #add_field': function () {
+	            var self = this;
+	            this.$('#field-tree-structure tr.ui-selected')
+	                .removeClass('ui-selected')
+	                .find('a').each(function () {
+	                    var id = $(this).attr('id').split('-')[1];
+	                    var string = $(this).attr('string');
+	                    self.add_field(id, string);
+	                });
+	        },
+	        'click #remove_field': function () {
+	            this.$('#fields_list option:selected').remove();
+	        },
 			'click #remove_all_field': function () {
 				if (confirm(_t('Remove all fields?'))) {
 					this.$('#fields_list').empty();
@@ -22,6 +35,25 @@ openerp.ir_export_extended_ept = function(instance) {
 	            
 	            //make all data type as default export
 	            this.$el.find('#import_compat').val('');
+	            
+	            //adding up/down buttons
+	            $(QWeb.render('ir_export_extended_ept.up_down')).insertAfter(this.$el.find('.oe_export_fields_selector_right'));
+	            
+	            //add up/down buttons events
+	            this.$el.find('#field_up').click(function(){
+	                up_el = self.$('#fields_list option:selected').first().prev();
+	                if(up_el.length === 1){
+	                    move_el = self.$('#fields_list option:selected').detach();
+	                    up_el.before(move_el);
+	                }
+	            });
+	            this.$el.find('#field_down').click(function(){
+	                down_el = self.$('#fields_list option:selected').last().next();
+	                if(down_el.length === 1){
+	                    move_el = self.$('#fields_list option:selected').detach();
+	                    down_el.after(move_el);
+	                }
+	            });
 	        },
         do_setup_export_formats: function(formats) {
             this._super(formats);
