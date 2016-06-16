@@ -1,5 +1,19 @@
 openerp.ir_export_extended_ept = function(instance) {
+	var QWeb = instance.web.qweb,
+		_t = instance.web._t;
+	
 	instance.web.DataExport.include({	
+		
+		
+		events: {
+			'click #remove_all_field': function () {
+				if (confirm(_t('Remove all fields?'))) {
+					this.$('#fields_list').empty();
+				} else {
+					return false
+				}
+			},
+		},
 		
 	    do_save_export_list: function(value) {
 	        var self = this;
@@ -27,6 +41,42 @@ openerp.ir_export_extended_ept = function(instance) {
 	            self.$el.find("#saved_export_list").append( new Option(value, export_list_id) );
 	        });
 	        this.on_show_save_list();
+	    },
+	    
+	    show_exports_list: function() {
+	        var self = this;
+	        if (self.$el.find('#saved_export_list').is(':hidden')) {
+	            self.$el.find('#ExistsExportList').show();
+	            return $.when();
+	        }
+	        return this.exports.read_slice(['name'], {
+	            domain: [['resource', '=', this.dataset.model]]
+	        }).done(function (export_list) {
+	            if (!export_list.length) {
+	                return;
+	            }
+	            self.$el.find('#ExistsExportList').append(QWeb.render('Exists.ExportList', {'existing_exports': export_list}));
+	            self.$el.find('#saved_export_list').change(function() {
+	                self.$el.find('#fields_list option').remove();
+	                var export_id = self.$el.find('#saved_export_list option:selected').val();
+	                if (export_id) {
+	                    self.rpc('/web/export/namelist', {'model': self.dataset.model, export_id: parseInt(export_id, 10)}).done(self.do_load_export_field);
+	                }
+	            });
+	            self.$el.find('#delete_export_list').click(function() {
+	            	if (confirm(_t('Delete saved list?'))) {
+		                var select_exp = self.$el.find('#saved_export_list option:selected');
+		                if (select_exp.val()) {
+		                    self.exports.unlink([parseInt(select_exp.val(), 10)]);
+		                    select_exp.remove();
+		                    self.$el.find("#fields_list option").remove();
+		                    if (self.$el.find('#saved_export_list option').length <= 1) {
+		                        self.$el.find('#ExistsExportList').hide();
+		                    }
+		                }
+	            	}
+	            });
+	        });
 	    },
 
 	    get_fields: function() {
