@@ -1,0 +1,356 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ir_export_extended_ept
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-17 06:50+0000\n"
+"PO-Revision-Date: 2016-06-17 06:50+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: da\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: ir_export_extended_ept
+#: model:email.template,body_html:ir_export_extended_ept.email_template_export_with_domain_ept
+msgid ""
+"\n"
+"             \n"
+"\t\t\t Hello,<br/>             \n"
+"             Here we have attached Export data file.<br/><br/>      \t\t  \n"
+"      \t\t \n"
+"           "
+msgstr ""
+"\n"
+"             \n"
+"\t\t\t Hello,<br/>             \n"
+"             Here we have attached Export data file.<br/><br/>      \t\t  \n"
+"      \t\t \n"
+"           "
+
+#. module: ir_export_extended_ept
+#: code:addons/ir_export_extended_ept/py/ir_exports.py:147
+#, python-format
+msgid "Attachment not found !"
+msgstr "Attachment not found !"
+
+#. module: ir_export_extended_ept
+#: field:ir.exports,attachment_id:0 field:ir.exports.download,attachment_id:0
+msgid "Attachments"
+msgstr "Vedhæftede filer"
+
+#. module: ir_export_extended_ept
+#: view:ir.exports:ir_export_extended_ept.view_ieee_search_form
+msgid "Category"
+msgstr "Kategori"
+
+#. module: ir_export_extended_ept
+#: field:ir.exports,color:0
+msgid "Color Index"
+msgstr "Farve index"
+
+#. module: ir_export_extended_ept
+#: field:export.wizard.ept,create_uid:0 field:ir.exports.download,create_uid:0
+#: field:ir.model.field.ept,create_uid:0
+msgid "Created by"
+msgstr "Oprettet af"
+
+#. module: ir_export_extended_ept
+#: field:export.wizard.ept,create_date:0
+#: field:ir.exports.download,create_date:0
+#: field:ir.model.field.ept,create_date:0
+msgid "Created on"
+msgstr "Oprettet den"
+
+#. module: ir_export_extended_ept
+#: help:ir.exports,message_last_post:0
+msgid "Date of the last message posted on the record."
+msgstr "Dato for sidste besked på denne post."
+
+#. module: ir_export_extended_ept
+#: view:ir.exports:ir_export_extended_ept.view_ir_export_kanban_ept
+msgid "Delete"
+msgstr "Slet"
+
+#. module: ir_export_extended_ept
+#. openerp-web
+#: code:addons/ir_export_extended_ept/static/src/js/data_export.js:113
+#, python-format
+msgid "Delete saved list?"
+msgstr ""
+
+#. module: ir_export_extended_ept
+#: view:export.wizard.ept:ir_export_extended_ept.export_wizard_view_ept
+msgid "Do you want to export"
+msgstr "Do you want to export"
+
+#. module: ir_export_extended_ept
+#: field:ir.exports,domain:0
+msgid "Domain"
+msgstr "Domæne"
+
+#. module: ir_export_extended_ept
+#. openerp-web
+#: code:addons/ir_export_extended_ept/static/src/xml/qweb-templates.xml:6
+#, python-format
+msgid "Down"
+msgstr ""
+
+#. module: ir_export_extended_ept
+#: view:export.wizard.ept:ir_export_extended_ept.export_wizard_view_ept
+msgid "Download"
+msgstr "Download"
+
+#. module: ir_export_extended_ept
+#: view:ir.exports:ir_export_extended_ept.view_ir_export_kanban_ept
+msgid "Edit"
+msgstr "Redigér"
+
+#. module: ir_export_extended_ept
+#: view:export.wizard.ept:ir_export_extended_ept.export_wizard_view_ept
+#: view:ir.exports:ir_export_extended_ept.ir_exports_view_ept
+#: model:ir.ui.menu,name:ir_export_extended_ept.export_with_domain_menu_ept
+msgid "Export"
+msgstr "Eksporter"
+
+#. module: ir_export_extended_ept
+#: view:ir.exports:ir_export_extended_ept.view_ir_export_kanban_ept
+msgid "Export By Email"
+msgstr "Export By Email"
+
+#. module: ir_export_extended_ept
+#: model:ir.actions.act_window,name:ir_export_extended_ept.ir_exports_action_ept
+#: view:ir.exports:ir_export_extended_ept.view_ieee_search_form
+#: view:ir.exports:ir_export_extended_ept.view_ir_export_kanban_ept
+#: model:ir.ui.menu,name:ir_export_extended_ept.exports_data_parent_menu_ept
+msgid "Export Data"
+msgstr "Eksporter Data"
+
+#. module: ir_export_extended_ept
+#: view:ir.exports:ir_export_extended_ept.ir_exports_view_ept
+#: model:ir.ui.menu,name:ir_export_extended_ept.export_fields_menu_ept
+msgid "Export Fields"
+msgstr "Export Fields"
+
+#. module: ir_export_extended_ept
+#: code:addons/ir_export_extended_ept/py/ir_exports.py:56
+#, python-format
+msgid "Export File"
+msgstr "Export File"
+
+#. module: ir_export_extended_ept
+#: model:ir.actions.act_window,name:ir_export_extended_ept.ir_exports_line_action_ept
+#: view:ir.exports.line:ir_export_extended_ept.ir_exports_line_view_ept
+msgid "Export Line"
+msgstr "Export Line"
+
+#. module: ir_export_extended_ept
+#: field:ir.model.field.ept,export_help:0
+msgid "Export Note"
+msgstr ""
+
+#. module: ir_export_extended_ept
+#: field:export.wizard.ept,export_version:0
+msgid "Export Version"
+msgstr "Export Version"
+
+#. module: ir_export_extended_ept
+#: view:ir.exports:ir_export_extended_ept.ir_exports_view_ept
+msgid "Export and email"
+msgstr "Export and email"
+
+#. module: ir_export_extended_ept
+#: model:email.template,subject:ir_export_extended_ept.email_template_export_with_domain_ept
+msgid "Export with Domain Report"
+msgstr "Export with Domain Report"
+
+#. module: ir_export_extended_ept
+#: field:ir.model.field.ept,exportable:0
+msgid "Exportable"
+msgstr ""
+
+#. module: ir_export_extended_ept
+#: field:ir.model.field.ept,field_id:0
+msgid "Field"
+msgstr "Felt"
+
+#. module: ir_export_extended_ept
+#: model:ir.actions.act_window,name:ir_export_extended_ept.action_ir_model_field_ept_tree
+#: view:ir.model.field.ept:ir_export_extended_ept.view_ir_model_field_ept_tree
+msgid "Fields"
+msgstr "Felter"
+
+#. module: ir_export_extended_ept
+#: view:ir.exports:ir_export_extended_ept.ir_exports_view_ept
+msgid "Fields to Export"
+msgstr "Fields to Export"
+
+#. module: ir_export_extended_ept
+#: model:ir.model,name:ir_export_extended_ept.model_ir_exports_download
+msgid "File downlaod"
+msgstr ""
+
+#. module: ir_export_extended_ept
+#: field:ir.exports,file_name:0
+msgid "Filename"
+msgstr "Filename"
+
+#. module: ir_export_extended_ept
+#: field:ir.exports,message_follower_ids:0
+msgid "Followers"
+msgstr "Folk der følger dig"
+
+#. module: ir_export_extended_ept
+#: view:ir.exports:ir_export_extended_ept.view_ieee_search_form
+msgid "Group By"
+msgstr "Gruppér efter"
+
+#. module: ir_export_extended_ept
+#: help:ir.exports,message_summary:0
+msgid ""
+"Holds the Chatter summary (number of messages, ...). This summary is "
+"directly in html format in order to be inserted in kanban views."
+msgstr ""
+"Indeholder chat sammendraget (antal beskeder). Dette sammendrag er i html "
+"format for at kunne sættes ind i kanban views."
+
+#. module: ir_export_extended_ept
+#: field:export.wizard.ept,id:0 field:ir.exports.download,id:0
+#: field:ir.model.field.ept,id:0
+msgid "ID"
+msgstr "Id"
+
+#. module: ir_export_extended_ept
+#: help:ir.exports,message_unread:0
+msgid "If checked new messages require your attention."
+msgstr "Hvis afmærket, kræver nye beskeder din opmærksomhed"
+
+#. module: ir_export_extended_ept
+#: field:ir.exports,message_is_follower:0
+msgid "Is a Follower"
+msgstr "Er en \"følger\""
+
+#. module: ir_export_extended_ept
+#: field:ir.exports.line,heading:0
+msgid "Label"
+msgstr "Label"
+
+#. module: ir_export_extended_ept
+#: view:ir.exports:ir_export_extended_ept.ir_exports_view_ept
+msgid "Last Export date"
+msgstr "Last Export date"
+
+#. module: ir_export_extended_ept
+#: field:ir.exports,message_last_post:0
+msgid "Last Message Date"
+msgstr "Sidste besked Dato"
+
+#. module: ir_export_extended_ept
+#: selection:export.wizard.ept,export_version:0
+msgid "Last One"
+msgstr "Last One"
+
+#. module: ir_export_extended_ept
+#: field:export.wizard.ept,write_uid:0 field:ir.exports.download,write_uid:0
+#: field:ir.model.field.ept,write_uid:0
+msgid "Last Updated by"
+msgstr "Sidst opdateret af"
+
+#. module: ir_export_extended_ept
+#: field:export.wizard.ept,write_date:0 field:ir.exports.download,write_date:0
+#: field:ir.model.field.ept,write_date:0
+msgid "Last Updated on"
+msgstr "Sidst opdateret den"
+
+#. module: ir_export_extended_ept
+#: selection:export.wizard.ept,export_version:0
+msgid "Latest and Save"
+msgstr "Latest and Save"
+
+#. module: ir_export_extended_ept
+#: field:ir.exports,message_ids:0
+msgid "Messages"
+msgstr "Beskeder"
+
+#. module: ir_export_extended_ept
+#: help:ir.exports,message_ids:0
+msgid "Messages and communication history"
+msgstr "Besked- og kommunikations historik"
+
+#. module: ir_export_extended_ept
+#: field:ir.exports,model_name:0 field:ir.model.field.ept,model_id:0
+msgid "Model"
+msgstr "Model"
+
+#. module: ir_export_extended_ept
+#: view:ir.exports:ir_export_extended_ept.view_ieee_search_form
+msgid "My Export List"
+msgstr "My Export List"
+
+#. module: ir_export_extended_ept
+#: view:ir.exports:ir_export_extended_ept.ir_exports_view_ept
+msgid "Name"
+msgstr "Navn"
+
+#. module: ir_export_extended_ept
+#: view:ir.exports:ir_export_extended_ept.ir_exports_view_ept
+#: field:ir.exports,notes:0
+msgid "Notes"
+msgstr "Noter"
+
+#. module: ir_export_extended_ept
+#. openerp-web
+#: code:addons/ir_export_extended_ept/static/src/js/data_export.js:134
+#, python-format
+msgid "Please select fields to save export list..."
+msgstr "Vælg felter for at gemme eksport liste..."
+
+#. module: ir_export_extended_ept
+#. openerp-web
+#: code:addons/ir_export_extended_ept/static/src/js/data_export.js:23
+#, python-format
+msgid "Remove all fields?"
+msgstr ""
+
+#. module: ir_export_extended_ept
+#: field:ir.exports.line,sequence:0
+msgid "Sequence"
+msgstr "Rækkefølge"
+
+#. module: ir_export_extended_ept
+#: field:ir.exports,message_summary:0
+msgid "Summary"
+msgstr "Sammendrag"
+
+#. module: ir_export_extended_ept
+#: code:addons/ir_export_extended_ept/py/ir_exports.py:184
+#, python-format
+msgid ""
+"There is no file found for attachment. Please click on \"Export Data\" "
+"button and select the option \"Latest and Save\"."
+msgstr ""
+"There is no file found for attachment. Please click on \"Export Data\" "
+"button and select the option \"Latest and Save\"."
+
+#. module: ir_export_extended_ept
+#: code:addons/ir_export_extended_ept/py/ir_exports.py:147
+#, python-format
+msgid "There is no last export for this record."
+msgstr "There is no last export for this record."
+
+#. module: ir_export_extended_ept
+#: field:ir.exports,message_unread:0
+msgid "Unread Messages"
+msgstr "Ulæste beskeder"
+
+#. module: ir_export_extended_ept
+#. openerp-web
+#: code:addons/ir_export_extended_ept/static/src/xml/qweb-templates.xml:5
+#, python-format
+msgid "Up"
+msgstr ""
