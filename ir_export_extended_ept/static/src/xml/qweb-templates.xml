@@ -2,8 +2,8 @@
 <templates id="template" xml:space="preserve">
     <t t-name="ir_export_extended_ept.up_down">
         <td class="oe_export_fields_up_down">
-            <button class="oe_button" id="field_up">Up</button>
-            <button class="oe_button" id="field_down">Down</button>
+            <button class="oe_button" id="field_up"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+            <button class="oe_button" id="field_down"><i class="fa fa-arrow-down" aria-hidden="true"></i></button>
         </td>
     </t>
 </templates>

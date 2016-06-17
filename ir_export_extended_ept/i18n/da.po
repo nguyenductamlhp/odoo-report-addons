@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-06-17 06:50+0000\n"
-"PO-Revision-Date: 2016-06-17 06:50+0000\n"
+"PO-Revision-Date: 2016-06-17 08:57+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "MIME-Version: 1.0\n"
@@ -15,6 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: da\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.8\n"
 
 #. module: ir_export_extended_ept
 #: model:email.template,body_html:ir_export_extended_ept.email_template_export_with_domain_ept
@@ -82,7 +83,7 @@ msgstr "Slet"
 #: code:addons/ir_export_extended_ept/static/src/js/data_export.js:113
 #, python-format
 msgid "Delete saved list?"
-msgstr ""
+msgstr "Slet gemt liste?"
 
 #. module: ir_export_extended_ept
 #: view:export.wizard.ept:ir_export_extended_ept.export_wizard_view_ept
@@ -99,7 +100,7 @@ msgstr "Domæne"
 #: code:addons/ir_export_extended_ept/static/src/xml/qweb-templates.xml:6
 #, python-format
 msgid "Down"
-msgstr ""
+msgstr "Ned"
 
 #. module: ir_export_extended_ept
 #: view:export.wizard.ept:ir_export_extended_ept.export_wizard_view_ept
@@ -152,7 +153,7 @@ msgstr "Export Line"
 #. module: ir_export_extended_ept
 #: field:ir.model.field.ept,export_help:0
 msgid "Export Note"
-msgstr ""
+msgstr "Export Note"
 
 #. module: ir_export_extended_ept
 #: field:export.wizard.ept,export_version:0
@@ -172,7 +173,7 @@ msgstr "Export with Domain Report"
 #. module: ir_export_extended_ept
 #: field:ir.model.field.ept,exportable:0
 msgid "Exportable"
-msgstr ""
+msgstr "Eksporterbar"
 
 #. module: ir_export_extended_ept
 #: field:ir.model.field.ept,field_id:0
@@ -193,7 +194,7 @@ msgstr "Fields to Export"
 #. module: ir_export_extended_ept
 #: model:ir.model,name:ir_export_extended_ept.model_ir_exports_download
 msgid "File downlaod"
-msgstr ""
+msgstr "Fil download"
 
 #. module: ir_export_extended_ept
 #: field:ir.exports,file_name:0
@@ -315,7 +316,7 @@ msgstr "Vælg felter for at gemme eksport liste..."
 #: code:addons/ir_export_extended_ept/static/src/js/data_export.js:23
 #, python-format
 msgid "Remove all fields?"
-msgstr ""
+msgstr "Fjern alle valgte felter?"
 
 #. module: ir_export_extended_ept
 #: field:ir.exports.line,sequence:0
