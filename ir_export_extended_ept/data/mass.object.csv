@@ -1,0 +1,2 @@
+"id","name","model_ids/id","model_id/id","field_ids/id"
+action_ir_export_mass_edit,"Exportable2?","ir_export_extended_ept.model_ir_model_field_ept","ir_export_extended_ept.model_ir_model_field_ept","ir_export_extended_ept.field_ir_model_field_ept_exportable"

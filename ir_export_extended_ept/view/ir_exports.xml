@@ -214,6 +214,36 @@
         <menuitem id="export_fields_menu_ept" name="Export Fields"
 			action="action_ir_model_field_ept_tree" parent="ir_export_extended_ept.exports_data_parent_menu_ept"
 			sequence="5" />
+		
+		<!--  Mass Edit Binding 
+		<record id="ir_mass_Edit_export" model="ir.values">
+			<field name="model">ir_model_field_ept</field>
+			<field name="name">Masse redigering (Exportable?)</field>
+			<field name="key2">client_action_multi</field>
+			<field name="value"
+				eval="'ir.actions.act_window,%d'%ir_export_extended_ept.action_ir_export_mass_edit" />
+		</record>	
+		-->
+			
+		<!-- Server action and binding to import Field list -->
+		<record id="action_update_field_list" model="ir.actions.server">
+			<field name="name">Update Field list</field>
+			<field name="condition">True</field>
+			<field name="type">ir.actions.server</field>
+			<field name="model_id" ref="model_ir_model_field_ept" />
+			<field name="state">code</field>
+			<field name="code">
+				model.sync_fields()
+			</field>
+		</record>
+		
+		<record id="ir_update_field_list" model="ir.values">
+			<field name="model">ir_model_field_ept</field>
+			<field name="name">Update Field list</field>
+			<field name="key2">client_action_multi</field>
+			<field name="value"
+				eval="'ir.actions.server,%d'%action_update_field_list" />
+		</record>
 			
 	</data>
 </openerp>
