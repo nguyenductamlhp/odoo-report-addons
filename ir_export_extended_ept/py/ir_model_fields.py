@@ -17,7 +17,7 @@ class irModelFieldEpt(models.Model):
         new_flds = self.env['ir.model.fields'].search([('id', 'not in', old_flds.ids)])
         for fld in new_flds:
             exportable = True
-            if fld.name in ["create_uid", "create_date", "write_uid", "write_date", "parent_right", "parent_left"]:
+            if fld.name in ["create_uid", "create_date", "write_uid", "write_date", "parent_right", "parent_left", "__last_update", ]:
                 exportable = False
             for f in ['can_', 'edit_']:
                 if fld.name.startswith(f):

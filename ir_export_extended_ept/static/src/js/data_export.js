@@ -31,10 +31,10 @@ openerp.ir_export_extended_ept = function(instance) {
 		start: function(){
 	            var self = this;
 
-	            this._super();
-	            
 	            //make all data type as default export
 	            this.$el.find('#import_compat').val('');
+	            
+	            this._super();
 	            
 	            //adding up/down buttons
 	            $(QWeb.render('ir_export_extended_ept.up_down')).insertAfter(this.$el.find('.oe_export_fields_selector_right'));
