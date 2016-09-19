@@ -26,6 +26,8 @@ openerp.ir_export_extended_ept = function(instance) {
 					return false
 				}
 			},
+			
+			 'click #export_new_list': 'on_show_save_list',
 		},
 		
 		start: function(){
