@@ -30,6 +30,7 @@ https://www.odoo.com/apps/modules?author=Emipro%20Technologies%20Pvt.%20Ltd. \n
              'wizard/export_wizard_view.xml',
              'view/webclient_templates.xml',
              'security/ir.model.access.csv',
+             'security/ir.rule.csv',
             ],
     'qweb': [
         "static/src/xml/*.xml",

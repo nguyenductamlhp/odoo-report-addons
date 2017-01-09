@@ -127,6 +127,8 @@ class ir_exports( models.Model ):
                     dwnld = dwnld_obj.create({'attachment_id':doc_id.id})
                 else:    
                     dwnld.write( {'attachment_id':doc_id.id} )
+                doc_id.write({'res_model': 'ir.exports.download',
+                              'res_id' : dwnld.id,})
                 return {
                     'type' : 'ir.actions.act_url',
                     'url':   '/web/binary/saveas?model=ir.attachment&field=datas&filename_field=name&id=%s' % ( doc_id.id ),
