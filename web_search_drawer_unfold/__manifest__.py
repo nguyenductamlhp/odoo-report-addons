@@ -15,7 +15,7 @@ Contact us at info@emiprotechnologies.com for more queries related to Odoo Custo
     'depends': ['web'],
     'data': ['views/webclient_templates.xml'],
     'images': ['static/description/main_screen.png'],
-    'installable': True,
+    'installable': False,
     'auto_install': False,
     'application': True,
 }

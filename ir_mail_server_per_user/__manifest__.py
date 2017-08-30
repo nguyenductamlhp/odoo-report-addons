@@ -35,7 +35,7 @@ For more information about us, visit www.emiprotechnologies.com \n
              'view/res_config.xml',
              ],
     'images': ['static/description/main_screen.png'],
-    "installable": True,
+    "installable": False,
     "auto_install": False,
     'application' : True,
 }

@@ -26,7 +26,7 @@ For more information about us, visit www.emiprotechnologies.com \n
     "depends": ["website_sale"],
     'images': ['static/description/main_screen.png'],
     "data": ['view/res_config.xml'],
-    "installable": True,
+    "installable": False,
     "auto_install": False,
     'application' : True,
 }

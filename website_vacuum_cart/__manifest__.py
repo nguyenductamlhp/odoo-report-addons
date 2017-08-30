@@ -26,7 +26,7 @@ https://www.odoo.com/apps/modules?author=Emipro%20Technologies%20Pvt.%20Ltd. \n
 For more information about us, visit www.emiprotechnologies.com \n
     """,
     'images': ['static/description/main_screen.png'],
-    'installable': True,
+    'installable': False,
     'auto_install': False,
     'application' : True,
 }
