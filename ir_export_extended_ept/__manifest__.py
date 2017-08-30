@@ -38,6 +38,6 @@ https://www.odoo.com/apps/modules?author=Emipro%20Technologies%20Pvt.%20Ltd. \n
 
     'installable': True,
     'auto_install': False,
-    'application': True,
+    'application': False,
     'images': ['static/description/main_screen.png'],
 }
