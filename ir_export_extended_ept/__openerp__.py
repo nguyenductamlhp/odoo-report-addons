@@ -21,7 +21,7 @@ Visit below link to find our more cool apps to shape your system ! \n
 https://www.odoo.com/apps/modules?author=Emipro%20Technologies%20Pvt.%20Ltd. \n
 """,
     'depends': [
-                'base', 'email_template', 'web', 'mass_editing',
+                'base', 'email_template', 'web', 'mass_editing', 'base_export_manager'
                 ],
     'data': ['data/export_data_templates.xml',
              'data/mass.object.csv',
